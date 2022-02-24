@@ -1,0 +1,41 @@
+{
+  "name": "hamilton",
+  "version": "0.0.1",
+  "description": "Tools and utilities for interacting with Project Hamilton OpenCBDC atomizer and 2pc environments",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/**/*.js"
+  },
+  "author": "Federal Reserve Bank of Boston",
+  "license": "MIT",
+  "dependencies": {
+    "@enumatech/secp256k1-js": "github:project-hamilton/secp256k1-js#fix/module-require",
+    "bech32": "^2.0.0",
+    "bip-schnorr": "^0.6.3",
+    "buffer": "^6.0.3",
+    "chai": "^4.3.4",
+    "crypto": "^1.0.1",
+    "mocha": "^9.0.2",
+    "net": "^1.0.2",
+    "secp256k1": "^4.0.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bsnowden3/hamilton.git"
+  },
+  "keywords": [
+    "open-cbdc",
+    "cbdc",
+    "node.js",
+    "javascript",
+    "hamilton",
+    "project-hamilton"
+  ],
+  "bugs": {
+    "url": "https://github.com/bsnowden3/hamilton/issues"
+  },
+  "homepage": "https://github.com/bsnowden3/hamilton#readme"
+}
