@@ -96,12 +96,12 @@ The following are example interactions.
 
 - Address
     ```
-        const addr = new Address(0, '3ad8f015f9212f8262248af4cf4cc39907d0215fdde14507f8bc09ad5836bbe9')
+        const addr = new Address('00', '3ad8f015f9212f8262248af4cf4cc39907d0215fdde14507f8bc09ad5836bbe9')
 
         console.log(addr.getAddress()); 
         usd1qqad3uq4lysjlqnzyj90fn6vcwvs05pptlw7z3g8lz7qnt2cx6a7jty6gr5
 
-        console.log(addr.decodeAdress());
+        console.log(addr.decodeAddress());
 
         { script_type: 0, pubHex: 3ad8f015f9212f8262248af4cf4cc39907d0215fdde14507f8bc09ad5836bbe9 }
     ```
@@ -125,7 +125,7 @@ The following are example interactions.
     ```
 - Transaction
     ```
-        const input = new Input('9f981e64afc0fc56a0d7b355cd9eba36f3d19507088713b1f73afc5bf301a44e', 0, 70cd87ebaaa0d2d059dccaceeb7f9f823a5791d60b00aef9d9573f1fbf91ca29, 200)
+        const input = new Input('9f981e64afc0fc56a0d7b355cd9eba36f3d19507088713b1f73afc5bf301a44e', 0, '70cd87ebaaa0d2d059dccaceeb7f9f823a5791d60b00aef9d9573f1fbf91ca29', 200)
         const output = new Output('81b095a242974d9f4e98ca18b468b8e644e4168380a035b3d66bc279b36c6510', 200)
         const tx = new Transaction([input], [output], []);
         tx.sign('e00b5c3d80899217a22fea87e7337907203df8a1efebd4d2a8773c8f629fff36')
@@ -158,7 +158,7 @@ The following are example interactions.
   const secretKey = "e00b5c3d80899217a22fea87e7337907203df8a1efebd4d2a8773c8f629fff36";
   const publicKey = "3ad8f015f9212f8262248af4cf4cc39907d0215fdde14507f8bc09ad5836bbe9";
   const sha256 = function () {...};
-  message = 'onomatopoeia';
+  const message = 'onomatopoeia';
 
   const sig = utils.sign(secretKey, message);
   utils.verify(publicKey, Buffer.from(sha256(message), 'hex'), sig);
