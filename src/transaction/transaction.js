@@ -28,7 +28,7 @@ class Transaction {
 
         // inputs
         if (!'inputs' in this || !Array.isArray(this.inputs))
-        throw new Error('object doesn\'t contain inputs');
+            throw new Error('object doesn\'t contain inputs');
 
         const inbuf = buffer.alloc(8);
         inbuf.writeBigUInt64LE(BigInt(this.inputs.length));
@@ -41,7 +41,7 @@ class Transaction {
                 || !'value' in this.inputs[i] )
                 throw new Error('input '+i+' doesn\'t contain tx_hash, index, witnessProgramCommitment, value');
             else {
-                console.log(this.inputs[i].tx_hash)
+                console.log(this.inputs[i].tx_hash);
                 const tx_hash = buffer.from(this.inputs[i].tx_hash, 'hex');
                 const index = buffer.alloc(8);
                 index.writeBigUInt64LE(BigInt(this.inputs[i].index));
@@ -56,7 +56,7 @@ class Transaction {
 
         // outputs
         if (! 'outputs' in this || !Array.isArray(this.outputs))
-        throw new Error('object doesn\'t contain outputs');
+            throw new Error('object doesn\'t contain outputs');
 
         const outbuf =  buffer.alloc(8);
         outbuf.writeBigUInt64LE(BigInt(this.outputs.length));
@@ -78,7 +78,7 @@ class Transaction {
 
         // witnesses
         if (! 'witnesses' in this || !Array.isArray(this.witnesses))
-        throw new Error('object doesn\'t contain witnesses');
+            throw new Error('object doesn\'t contain witnesses');
 
         const witnessbuf = buffer.alloc(8);
         witnessbuf.writeBigUInt64LE(BigInt(this.witnesses.length));
@@ -129,7 +129,7 @@ class Transaction {
                 || !'value' in this.inputs[i] )
                 throw new Error('input '+i+' doesn\'t contain tx_hash, index, witnessProgramCommitment, value');
             else {
-                console.log("Trying out tx_hash: ", this.inputs[i].tx_hash);
+                console.log('Trying out tx_hash: ', this.inputs[i].tx_hash);
                 const tx_hash = buffer.from(this.inputs[i].tx_hash, 'hex');
                 const index = buffer.allocUnsafe(8);
                 index.writeBigUInt64LE(BigInt(this.inputs[i].index));
@@ -254,7 +254,7 @@ class Transaction {
                     signature: sig.toString('hex') });
 
         }
-      return this;
+        return this;
     }
 }
 

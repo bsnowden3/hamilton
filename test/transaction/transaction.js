@@ -6,7 +6,7 @@ const Output = require('../../src/transaction/output');
 describe('Transaction', function() {
     it('test tx creation', function() {
         const input = new Input('123456', 0, 'abcdef1234', 10000);
-        const output = new Output('abdcefg', 10000)
+        const output = new Output('abdcefg', 10000);
         let tx = new Transaction([input], [output], []);
         expect(tx).to.be.not.null;
     });

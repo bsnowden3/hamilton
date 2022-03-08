@@ -51,7 +51,7 @@ class Output {
      */
     toString() {
         const output = { witnessProgramCommitment: this.witnessProgramCommitment, value: this.value };
-        return "Output: " + "witness commitment:" + " " + output.witnessProgramCommitment + " " + "value: +" + output.value
+        return 'Output: ' + 'witness commitment:' + ' ' + output.witnessProgramCommitment + ' ' + 'value: +' + output.value;
     }
 }
 

@@ -31,7 +31,7 @@ class Input {
 
         return buffer.concat(
             [buffer.from(this.tx_hash, 'hex'), indexBuffer,
-             buffer.from(this.witnessProgramCommitment, 'hex'), valueBuffer]);
+                buffer.from(this.witnessProgramCommitment, 'hex'), valueBuffer]);
     }
 
     bufStringHex() {
@@ -42,7 +42,7 @@ class Input {
 
         return buffer.concat(
             [buffer.from(this.tx_hash, 'hex'), indexBuffer,
-             buffer.from(this.witnessProgramCommitment, 'hex'), valueBuffer]).toString('hex');
+                buffer.from(this.witnessProgramCommitment, 'hex'), valueBuffer]).toString('hex');
     }
 
     /**
@@ -68,7 +68,7 @@ class Input {
      */
     toString() {
         const input = { tx_hash: this.tx_hash, index: this.index, witnessProgramCommitment: this.witnessProgramCommitment, value: this.value };
-        return "Input: tx_hash: " + input.tx_hash + " index: " +  input.index + " witness commitment: " + input.witnessProgramCommitment + " value: " + input.value
+        return 'Input: tx_hash: ' + input.tx_hash + ' index: ' +  input.index + ' witness commitment: ' + input.witnessProgramCommitment + ' value: ' + input.value;
     }
 }
 

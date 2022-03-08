@@ -1,10 +1,12 @@
 {
   "name": "hamilton",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Tools and utilities for interacting with Project Hamilton OpenCBDC atomizer and 2pc environments",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/**/*.js"
+    "test": "mocha test/**/*.js",
+    "eslint": "eslint . && eslint src/**/*.js && eslint test/**/*.js",
+    "precommit": "eslint"
   },
   "author": "Federal Reserve Bank of Boston",
   "license": "MIT",
@@ -37,5 +39,9 @@
   "bugs": {
     "url": "https://github.com/bsnowden3/hamilton/issues"
   },
-  "homepage": "https://github.com/bsnowden3/hamilton#readme"
+  "homepage": "https://github.com/bsnowden3/hamilton#readme",
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "pre-commit": "^1.2.2"
+  }
 }

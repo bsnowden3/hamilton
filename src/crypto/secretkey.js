@@ -24,7 +24,7 @@ class SecretKey {
      * @returns {Buffer} secretKey Buffer formation
      */
     toBuffer() {    
-      return this.secretKey;
+        return this.secretKey;
     }
     
     /**
@@ -32,7 +32,7 @@ class SecretKey {
      * @returns PrivateKey from privateKe
      */
     static fromHex(secretKeyHex) {
-        return new PrivateKey(buffer.from(secretKeyHex, 'hex'));
+        return new SecretKey(buffer.from(secretKeyHex, 'hex'));
     }
 
     /**

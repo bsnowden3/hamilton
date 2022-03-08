@@ -19,7 +19,7 @@ const Networking = {
             const finalPacket = buffer.concat([sizePacket, reqIdBuf, signedTxBuffer]);
 
             client.write(finalPacket, (err) => {
-                console.log("Error", err);
+                console.log('Error', err);
             });
         });
 
