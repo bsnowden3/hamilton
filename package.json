@@ -1,6 +1,6 @@
 {
   "name": "hamilton",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Tools and utilities for interacting with Project Hamilton OpenCBDC atomizer and 2pc environments",
   "main": "index.js",
   "scripts": {
