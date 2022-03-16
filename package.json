@@ -11,7 +11,7 @@
   "author": "Federal Reserve Bank of Boston",
   "license": "MIT",
   "dependencies": {
-    "@enumatech/secp256k1-js": "github:project-hamilton/secp256k1-js#fix/module-require",
+    "@enumatech/secp256k1-js": "github:project-hamilton/secp256k1-js",
     "bech32": "^2.0.0",
     "bip-schnorr": "^0.6.3",
     "buffer": "^6.0.3",
