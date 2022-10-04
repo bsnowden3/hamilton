@@ -36,13 +36,14 @@ The following is a breakdown of sections and classes for this cbdc-module:
 
 ## Networking
 * Networking
-    - broadcastTx(port, host, signedTxBuf) - ```broadcast a signedTxBuf to a sentinel server at host {host} and port {port} number```
+    - broadcastTx(port, host, signedTxHex) - ```broadcast a signedTxBuf to a sentinel server at host {host} and port {port} number```
         - port - {number} port number of host
         - host - {string} hostname url to send signedTx
+        - signedTxHex - {string} a valid hexadecimal encoded transaction that has been signed
 
 ## Transaction
 - Input
-    - constructor(tx_hash, index, witnessProgrammCommitment, value) ```returns new Input Object Type```
+    - constructor(tx_hash, index, witnessProgramCommitment, value) ```returns new Input Object Type```
         - tx_hash - {String} valid hexadecimal string for transaction hash this input references
         - index - {number} index position of the input for tx
         - witnessProgramCommitment {String} - witness commitment for this input
