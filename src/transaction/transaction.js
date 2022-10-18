@@ -3,7 +3,7 @@ const crypto = require('crypto');
 const buffer = require('buffer/').Buffer;
 const Input = require('./input');
 const Output = require('./output');
-const Secp256k1 = require('@lionello/secp256k1-js');
+const Secp256k1 = require('@enumatech/secp256k1-js');
 
 class Transaction {
     /**

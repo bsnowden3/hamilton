@@ -1,4 +1,4 @@
-const Secp256k1 = require('@lionello/secp256k1-js');
+const Secp256k1 = require('@enumatech/secp256k1-js');
 const buffer = require('buffer/').Buffer;
 
 class PublicKey {
