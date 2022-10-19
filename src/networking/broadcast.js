@@ -15,8 +15,10 @@ const Networking = {
             reqIdBuf.writeBigUInt64LE(BigInt(requestId));
             const sizePacket = buffer.alloc(8);
             const signedTxBuffer = buffer.from(signedTxHex, 'hex');
-            sizePacket.writeBigUInt64LE(BigInt(signedTxBuffer.length + reqIdBuf.length));
-            const finalPacket = buffer.concat([sizePacket, reqIdBuf, signedTxBuffer]);
+            const executionByte = buffer.from('00', 'hex');
+            const messageTypeSize = 1; // Size of Message Type Byte in Data Format to Sentinel
+            sizePacket.writeBigUInt64LE(BigInt(signedTxBuffer.length + reqIdBuf.length + messageTypeSize));
+            const finalPacket = buffer.concat([sizePacket, reqIdBuf, executionByte, signedTxBuffer]);
 
             client.write(finalPacket, (err) => {
                 console.log('Error', err);
